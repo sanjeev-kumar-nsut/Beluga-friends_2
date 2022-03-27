@@ -26,16 +26,23 @@ export default function Login(props){
     {
         console.log("email :",email);
         console.log("pass :",pass);
-        props.data.map((item) => {
+        let found = false;
+        for(let item of props.data){
             if(item.email===email && item.password===pass)
             {
-                setPage("Home");
+              setName(item.name);
+              found = true;
+              break;
             }
-            else
-            {
-                alert("invalid email/password");
-            }
-        })
+        }
+        if(found)
+        {
+          setPage("Home");
+        }
+        else
+        {
+          alert("invalid email/password");
+        }
     }
     function handleSignIn(){
         setPage("signin");
@@ -74,7 +81,7 @@ export default function Login(props){
         <div className="home">
         <h1>Sign In</h1>
            
-             <div className="form">
+             <div className="form topform">
           <input onChange={handleName} type="text" name="name" autoComplete="off" required />
           <label htmlFor="name" className="label-name">
             <span className="content-name">Name</span>
@@ -94,7 +101,7 @@ export default function Login(props){
         </div>
         <button onClick={addData}  className="btn first"> Submit </button>
             <div className="link-wrapper">
-        <a onClick={handleLogIn} className="link hover-2" href="#">Already have an account? Sign In</a>
+        <a onClick={handleLogIn} className="link hover-2" href="#">Already have an account? Log In</a>
         </div>
         </div> 
 
@@ -120,7 +127,7 @@ export default function Login(props){
         <div className="home">
         <h1>Log In</h1>
         
-        <div className="form">
+        <div className="form topform">
           <input onChange={handleEmail} type="text" name="email" autoComplete="off" required />
           <label htmlFor="email" className="label-name">
             <span className="content-name">Email</span>

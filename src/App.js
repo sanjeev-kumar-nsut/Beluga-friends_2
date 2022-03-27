@@ -26,7 +26,7 @@ function App() {
     }
   return (
     <>
-    {/* <Navbar/> */}
+    <Navbar/>
     <Login data = {LoginData} setData = {setLoginData} handleNew = {handleNew} />
     </>
   );

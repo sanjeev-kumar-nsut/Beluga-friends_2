@@ -83,13 +83,16 @@ input{
     align-items: center;
     flex-direction: column;
     font-family: sans-serif;
+    margin-top:-40px;
 }
 
 .form {
     width : 50%;
     position: relative;
-    height: 65px;
+    height: 75px;
     overflow: hidden;
+    margin-top: -30px;
+    
 }
 
 .form input {
@@ -135,13 +138,16 @@ input{
 .form input:focus + .label-name .content-name,
 .form input:valid + .label-name .content-name {
     transform: translateY(-150%);
-    font-size: 20px;
+    font-size: 15px;
     color: #3C8CE7;
 }
 
 .form input:focus .label-name::after,
 .form input:valid + .label-name:after {
     transform: translateX(0%);
+}
+.topform{
+    margin-top: -40px;
 }
 
 
@@ -181,11 +187,15 @@ h1:after {
     position: relative;
     display: block;
     padding: 5px 0;
+    margin-top:-40px;
 }
 
 .inner-wrapper {
     position: relative;
     display: inline-block;
+}
+.hover-2{
+    margin-top: -100px !important;
 }
 .hover-2:hover:after {
             transform: scaleX(1);    
@@ -243,6 +253,7 @@ h1:after {
   }
 
 .first {
+    margin-top: -20px;
   transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 .first:hover {

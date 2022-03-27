@@ -1,0 +1,42 @@
+.logoimg{
+    width:3rem;
+    height: 3rem;
+}
+
+
+.navbar{
+    background-color: #e3f2fd;
+    margin-bottom: 15rem;
+}
+.container-fluid{
+    width: 100%;
+    
+}
+.collapse{
+    margin-left: 17%;
+}
+
+.navbar-nav{
+    margin-left: 70%;
+    /* border: 2px solid black; */
+}
+.nav-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+.navitem{
+    color: rgb(121, 115, 115);
+    
+    padding-top: 8px;
+}
+
+.navitem:hover{
+    color: black;
+}
+.center{
+    text-align: center;
+    width: 100%;
+}
